@@ -34,7 +34,6 @@ define fail2ban::jail (
     path    => "${config_dir_filter_path}/${name}.conf",
     content => epp('fail2ban/common/custom_filter.conf.epp',
       {
-        findtime                 => $findtime,
         filter_includes          => $filter_includes,
         filter_additional_config => $filter_additional_config,
         filter_failregex         => $filter_failregex,
