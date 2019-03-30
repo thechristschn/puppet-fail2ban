@@ -12,7 +12,7 @@ maxlines = <%= $filter_maxlines %>
 datepattern = <%= $filter_datepattern %>
 <% } -%>
 
-<% if $findtime { -%>
+<% if $filter_includes { -%>
 [INCLUDES]
 <%= $filter_includes %>
 <% } -%>
