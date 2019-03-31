@@ -4,23 +4,26 @@
 #
 
 [<%= $name %>]
-enabled  = <%= $enabled %>
+enabled     = <%= $enabled %>
 <% if $action { -%>
-action   = <%= $action %>
+action      = <%= $action %>
 <% } -%>
-filter   = <%= $filter %>
-logpath  = <%= $logpath %>
-maxretry = <%= $maxretry %>
+filter      = <%= $filter %>
+logpath     = <%= $logpath %>
+<% if $logtimezone { -%>
+logtimezone = <%= $logtimezone %>
+<% } -%>
+maxretry    = <%= $maxretry %>
 <% if $findtime { -%>
-findtime     = <%= $findtime %>
+findtime    = <%= $findtime %>
 <% } -%>
-bantime  = <%= $bantime %>
+bantime     = <%= $bantime %>
 <% if $port { -%>
-port     = <%= $port %>
+port        = <%= $port %>
 <% } -%>
 <% if $backend { -%>
-backend  = <%= $backend %>
+backend     = <%= $backend %>
 <% } -%>
 <% unless $ignoreip.empty { -%>
-ignoreip = <%= $ignoreip.join(' ') -%>
+ignoreip    = <%= $ignoreip.join(' ') -%>
 <% } -%>
