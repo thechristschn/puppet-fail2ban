@@ -480,6 +480,7 @@ Users can add their own jails by using this YAML definition:
       filter_failregex: '<HOST>.*] "POST /wp-login.php'
       port: 'http,https'
       logpath: '/var/log/nginx/access.log'
+      logtimezone: 'UTC'
       maxretry: 3
       findtime: 120
       bantime: 1200

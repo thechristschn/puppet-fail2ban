@@ -18,6 +18,7 @@ define fail2ban::jail (
   Optional[String] $backend = undef,
   Optional[String[1]] $journalmatch = undef,
   Array[Stdlib::IP::Address] $ignoreip = [],
+  Optional[String] $logtimezone = undef,
 
   Stdlib::Absolutepath $config_dir_filter_path = $fail2ban::config_dir_filter_path,
   Optional[String] $config_file_owner = $fail2ban::config_file_owner,
@@ -69,6 +70,7 @@ define fail2ban::jail (
         backend      => $backend,
         journalmatch => $journalmatch,
         ignoreip     => $ignoreip,
+        logtimezone  => $logtimezone,
       }
     ),
     owner   => $config_file_owner,
